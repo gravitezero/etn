@@ -1,0 +1,6 @@
+- unless pages.empty?
+  - pages.each do |page|
+    %a{ :href => page.abspath }
+      %article{ :style => "background-image:url(/attachments/" + page.path + ".png)" }
+        - haml_tag (defined?(heading) ? heading : :h1) do
+          = page.heading

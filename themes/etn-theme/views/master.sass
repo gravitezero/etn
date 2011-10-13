@@ -1,0 +1,134 @@
+@import url(http://fonts.googleapis.com/css?family=Lobster|Arimo)
+
+/// Variables
+
+$base : #04859D
+$dark : #222
+$light : #EEE
+
+/// Mixin
+
+@mixin transition($duration, $properties)
+  transition-property : $properties
+  transition-duration : $duration
+  -moz-transition-property : $properties
+  -moz-transition-duration : $duration
+  -webkit-transition-property : $properties
+  -webkit-transition-duration : $duration
+  -o-transition-property : $properties
+  -o-transition-duration : $duration
+  
+@mixin transform($properties)
+  transform : $properties
+  -moz-transform : $properties
+  -webkit-transform : $properties
+  -o-transform : $properties
+
+@mixin transform-origin($properties)
+  transform-origin : $properties
+  -moz-transform-origin : $properties
+  -webkit-transform-origin : $properties
+  -o-transform-origin : $properties
+  
+/// Main
+
+body
+  color : $dark
+  background : $light
+  font-family : 'Arimo', sans-serif
+  margin : 0
+
+body > *
+  width : 720px
+  margin : auto
+
+a
+  color : $light
+  &:visited
+    color : $light
+  
+  
+header
+  color : $dark
+  border-color : $dark
+  border-bottom : 2px solid
+  font-family : 'Lobster', cursive
+  overflow : hidden
+  @include transition(1s, (color, border-color))
+
+  &:hover
+    color : $base
+    border-color : $base
+    @include transition(1s, (color, border-color))
+
+  h1, h2
+    -moz-transform : rotate(-45deg)
+    display : inline
+    font-weight : normal
+
+  h1
+    font-size : 80pt
+    margin-right : -44px
+
+  h2
+    font-size : 20pt
+    -moz-transform-origin : 0 0
+
+nav
+  display : none
+
+#content
+  margin-top : 1px
+  border-top : 1px $dark solid
+  text-align : center
+  padding : 5px 0 0 0
+
+article
+  display : inline-block
+  position : relative
+  margin : 0px
+  
+  width : 100px
+  height : 300px
+
+  text-align : left
+  overflow : hidden
+ 
+  opacity : 0.8
+  background : $dark 
+  background-size : cover
+  color : $light
+  
+  @include transition(1s, (width, opacity))
+
+  margin-left : -3px
+
+  &:hover
+    @include transition(1s, (width, opacity))
+    opacity : 1
+    width : 200px
+
+  h1
+    @include transform(translatey(-75px) rotate(-90deg))
+    position : absolute
+    right : -93px
+    bottom : 0
+    
+    width : 200px
+    @include transition(1s, (right))  
+    
+    font-size : 18pt
+    font-weight : lighter
+
+  &:hover h1
+    right : -80px
+    @include transition(1s, (right)) 
+
+footer
+  border-top : 1px #222 solid
+  
+  bottom : 0px
+  padding : 1em 0px
+  
+  text-align : center
+  font-size : 9pt

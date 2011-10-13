@@ -1,0 +1,11 @@
+%nav
+  %a{ :href => "/" } Home
+  &gt;
+  - if @page.parent
+    %a{ :href => @page.parent.abspath }= @page.parent.heading
+    &gt;
+  = @page.heading
+
+#content
+  ~ @page.to_html(self)
+
