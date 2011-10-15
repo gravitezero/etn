@@ -37,6 +37,7 @@ body
   background : $light
   font-family : 'Arimo', sans-serif
   margin : 0
+  font-size : 10pt
 
 body > *
   width : 720px
@@ -46,14 +47,16 @@ a
   color : $light
   &:visited
     color : $light
-  
+
+h1, h2
+  font-family : 'Lobster', cursive
   
 header
   color : $dark
   border-color : $dark
   border-bottom : 2px solid
-  font-family : 'Lobster', cursive
   overflow : hidden
+  height : 200px
   @include transition(1s, (color, border-color))
 
   &:hover
@@ -62,8 +65,8 @@ header
     @include transition(1s, (color, border-color))
 
   h1, h2
-    -moz-transform : rotate(-45deg)
-    display : inline
+    @include transform(rotate(-45deg))
+    display : inline-block
     font-weight : normal
 
   h1
@@ -72,19 +75,21 @@ header
 
   h2
     font-size : 20pt
-    -moz-transform-origin : 0 0
+    @include transform-origin(0 0)
 
 nav
   display : none
 
-#content
+#summarize
   margin-top : 1px
   border-top : 1px $dark solid
   text-align : center
   padding : 5px 0 0 0
 
-article
+a.article
   display : inline-block
+
+article
   position : relative
   margin : 0px
   
