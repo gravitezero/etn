@@ -1,0 +1,39 @@
+Date : 20 January 2012
+
+# Node project
+
+##About the Node Project
+
+I started thinking about a distributed OS many years ago, and I recently decided to start a project about my vision of distributed OS.
+
+I didn't find any good, appealing name for this wide project, so I used Node instead, the name of one of the subproject I thought about.
+
+##The difference I see between OS and Interface
+
+When I thought about distributed OS, it was in fact a distributed interface, instead of a distributed OS.
+I think an OS should keep managing the hardware, and let the interface to another independent piece of code.
+And it should be this piece of code which unify user's experiences along all devices users owns.
+
+##Links
+
+The file and folder paradigm was a good metaphor to start, and still a good way to organize file accurately for a machine.
+However, for a human, better way of organization could be found.
+
+I think our documents of any kind shouldn't be arrange with a hierarchical filesystem anymore. Instead, documents could be linked to each others to better fit the mental representation.
+
+
+##Projects
+
+A project is a collection of document which belong to a common topic.
+
+##Atoms
+
+##Distributed interface
+
+The user experience should be the same along all devices.
+
+
+
+
+
+
