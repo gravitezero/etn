@@ -6,7 +6,7 @@ Date : 20 January 2012
 
 I started thinking about a distributed OS many years ago, and I recently decided to start a project about my vision of distributed OS.
 
-I didn't find any good, appealing name for this wide project, so I used Node instead, the name of one of the subproject I thought about.
+I can't find any name for this wide project, so I used Node instead, the name of one of its subproject.
 
 ##The difference I see between OS and Interface
 
