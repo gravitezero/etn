@@ -18,9 +18,12 @@
     
   %body
     %header
-      - @heading.split.each do |word|
-        %h1=word
-      %h2= @subtitle
+      #logo
+        - @heading.split.each do |word|
+          %h1= word
+        -#%h2= @subtitle
+
+      
     = yield
     %footer
       Etienne Brodu © 2011

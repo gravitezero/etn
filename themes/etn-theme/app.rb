@@ -8,7 +8,7 @@ module Nesta
     #
     # Put your assets in themes/etn-theme/public/etn-theme.
     #
-    # use Rack::Static, :urls => ["/etn-theme"], :root => "themes/etn-theme/public"
+    use Rack::Static, :urls => ["/etn-theme"], :root => "themes/etn-theme/public"
 
     helpers do
       # Add new helpers here.

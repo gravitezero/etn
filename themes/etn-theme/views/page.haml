@@ -5,6 +5,6 @@
     %a{ :href => @page.parent.abspath }= @page.parent.heading
     &gt;
   = @page.heading
-
-~ @page.to_html(self)
+%section
+  ~ @page.to_html(self)
 

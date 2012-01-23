@@ -2,9 +2,12 @@
 
 /// Variables
 
-$base : #04859D
+$base : #066C7E
+$base-light : #13798F
+$base-extra-light : #CEE9ED
+$comp : #EF7B59
 $dark : #222
-$light : #EEE
+$light : #F0F0F0
 
 /// Mixin
 
@@ -40,7 +43,7 @@ body
   font-size : 10pt
 
 body > *
-  width : 720px
+  width : auto
   margin : auto
 
 a
@@ -52,33 +55,28 @@ h1, h2
   font-family : 'Lobster', cursive
   
 header
-  color : $dark
-  border-color : $dark
-  border-bottom : 2px solid
-  overflow : hidden
-  height : 200px
-  @include transition(1s, (color, border-color))
+  background : $base
+  border-bottom : 100px solid $base-light
+  height : 140px
+  position : relative
+  top : 0px
 
-  &:hover
-    color : $base
-    border-color : $base
-    @include transition(1s, (color, border-color))
+  #logo
+    color : $light
+    background : url('/etn-theme/png/logo.png')
+    margin : auto
+    width : 417px
+    height : 276px
+    position : relative
+    top : 72px
 
-  h1, h2
-    @include transform(rotate(-45deg))
-    display : inline-block
-    font-weight : normal
-
-  h1
-    font-size : 80pt
-    margin-right : -44px
-
-  h2
-    font-size : 20pt
-    @include transform-origin(0 0)
+    h1
+      text-align : center
+      //position : relative
+      //top : 140px
 
 nav
-  display : none
+  //display : none
 
 #summarize
   margin-top : 1px
