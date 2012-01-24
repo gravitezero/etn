@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Lobster|Arimo)
+@import url(http://fonts.googleapis.com/css?family=Titan+One)
 
 /// Variables
 
@@ -35,12 +35,20 @@ $light : #F0F0F0
   
 /// Main
 
+html, body
+  height : 100%
+  padding : 0
+
 body
   color : $dark
   background : $light
   font-family : 'Arimo', sans-serif
   margin : 0
   font-size : 10pt
+
+#container  
+  position : relative
+  min-height : 100%
 
 body > *
   width : auto
@@ -65,18 +73,24 @@ header
     color : $light
     background : url('/etn-theme/png/logo.png')
     margin : auto
-    width : 417px
-    height : 276px
+    width : 366px
+    height : 250px
     position : relative
-    top : 72px
+    top : 93px
 
-    h1
+    #title
+      font-family : 'Titan One', cursive
+      font-size : 25pt
       text-align : center
-      //position : relative
-      //top : 140px
+
+      position : relative
+      top : 120px
 
 nav
   //display : none
+
+#content
+  padding : 120px
 
 #summarize
   margin-top : 1px
@@ -128,10 +142,17 @@ article
     @include transition(1s, (right)) 
 
 footer
-  border-top : 1px #222 solid
   
-  bottom : 0px
-  padding : 1em 0px
+  border-top : 1px solid #CCC
+  
+  background : #DDD
+  
+  position : absolute
+  bottom : 0pt
+  
+  width : 100%
+  
+  padding : 2em 0
   
   text-align : center
   font-size : 9pt

@@ -17,13 +17,14 @@
     %link{ :href => "css/shThemeDefault.css", :rel => "stylesheet", :type => "text/css"}
     
   %body
-    %header
-      #logo
-        - @heading.split.each do |word|
-          %h1= word
-        -#%h2= @subtitle
+    #container
+      %header
+        #logo
+          - @heading.split.each do |word|
+            #title= word
+          -#%h2= @subtitle
 
-      
-    = yield
-    %footer
-      Etienne Brodu © 2011
+  
+      = yield
+      %footer
+        Etienne Brodu © 2011
