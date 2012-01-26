@@ -49,13 +49,13 @@ html, body
   padding : 0
   margin : 0
 
-body
-  color : $dark
-  background : $light
+#container
   font-size : 10pt
   font-family : 'Open+Sans', sans-serif
-
-#container  
+  
+  color : $dark
+  background : $light
+  
   position : relative
   min-height : 100%
 
@@ -117,33 +117,36 @@ header
         opacity : 0.2
         &:hover
           opacity : 0.5
+          
+    #valid
+      float : left
+      position : relative
+      top : -70px
+      
+      a
+        opacity : 0.2
+        &:hover
+          opacity : 0.5  
     
 
 nav 
-  //background : #DDD
-  //border : 1px solid #CCC
-  //padding : 0.5em
-  //margin : 1em 0
+  background : #DDD
+  border : 1px solid #CCC
+  padding : 0.5em 0em 0.3em 0.5em
   
   & *
     display : inline
   
   .bc-link
     background : no-repeat right url('/etn-theme/png/breadcrumb.png') #DDD
-    
-    border-top : 1px solid #CCC
-    border-bottom : 1px solid #CCC
-    
     padding : 0.5em 1em 0.3em 0.5em
 
     &:first-child
-      border-left : 1px solid #CCC
       padding-left : 0.5em
   
     &:last-child
-      border-right : 1px solid #CCC
       padding-right : 0.5em
-      background : #DDD  
+      background-image : none
 
 #content
   max-width : 720px
@@ -167,3 +170,15 @@ footer
   
   text-align : center
   font-size : 9pt
+
+
+#container.not_found
+  background : rgb(0, 51, 102)
+  text-align : center
+
+#content.not_found
+  padding-top : 30px
+
+h1.not_found
+  color : white
+  font-size : 30pt

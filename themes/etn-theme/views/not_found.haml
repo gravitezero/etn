@@ -1,13 +1,6 @@
-.breadcrumb
-  %a{ :href => "/" } Home
-
-#content
-  %h1 Page not found
-
-  %p
-    Please try another page or, if you think something is wrong with our site,
-    do get in touch and let us know.
-
-#sidebar
-  = haml :categories, :layout => false
-  = haml :feed, :layout => false
+#container.not_found
+  = haml :header, :layout => false
+  #content.not_found
+    %h1.not_found Page not found
+    %img{ :src => "/etn-theme/png/nyan.gif", :alt => "Page not found" }
+  = haml :footer, :layout => false

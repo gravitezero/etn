@@ -10,20 +10,7 @@
     %link{ :href => "/css/master.css", :media => "screen", :rel => "stylesheet", :type => "text/css" }
     - local_stylesheet_link_tag('local')
     %link{ :href => "/articles.xml", :rel => "alternate", :type => "application/atom+xml" }
-    = haml :analytics, :layout => false
-    %script{ :type => "text/javascript", :src => "js/shCore.js"}
-    %script{ :type => "text/javascript", :src => "css/shBrushJScript.js"}
-    %link{ :href => "css/shCore.css", :rel => "stylesheet", :type => "text/css"}
-    %link{ :href => "css/shThemeDefault.css", :rel => "stylesheet", :type => "text/css"}
+    -#= haml :analytics, :layout => false
     
   %body
-    #container
-      %header
-        #header-content
-          #logo
-            - @heading.split.each do |word|
-              .title= word
-          = haml :social, :layout => false
-      = yield
-      %footer
-        Etienne Brodu © 2011
+    = yield

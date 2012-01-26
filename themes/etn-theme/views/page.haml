@@ -1,12 +1,8 @@
-#content
-  %nav
-    .bc-link
-      %a{ :href => "/" } Home
-    .bc-link
-      %a{ :href => "/" } Home
-    - if @page.heading
-      .bc-link
-        = @page.heading
-  %article  
-    ~ @page.to_html(self)
+#container
+  = haml :header, :layout => false
+  #content
+    = haml :nav, :layout => false
+    %article  
+      ~ @page.to_html(self)
+  = haml :footer, :layout => false
 
