@@ -33,6 +33,15 @@ A project is a collection of document which belong to a common topic.
 The user experience should be the same along all devices.
 
 
+Abstract data from physical machine to distribute them on multiple storage devices
+
+Abstract data from interface and machine
+
+Adapt Interface on each device
+
+Base virtual representation on mental representation by making data bit smaller and allowing making links
+
+Make easier moving activity and collaboration by making smaller apps atoms.
 
 
 

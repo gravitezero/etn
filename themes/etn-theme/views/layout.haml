@@ -19,12 +19,11 @@
   %body
     #container
       %header
-        #logo
-          - @heading.split.each do |word|
-            #title= word
-          -#%h2= @subtitle
-
-  
+        #header-content
+          #logo
+            - @heading.split.each do |word|
+              #title= word
+          = haml :social, :layout => false
       = yield
       %footer
         Etienne Brodu © 2011

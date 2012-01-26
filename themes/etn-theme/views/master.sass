@@ -1,13 +1,15 @@
-@import url(http://fonts.googleapis.com/css?family=Titan+One)
+@import url(http://fonts.googleapis.com/css?family=Titan+One|Quicksand|Open+Sans:400,700,600,400italic)
 
 /// Variables
 
-$base : #066C7E
-$base-light : #13798F
+$base : rgb(6, 108, 126)
+$base-light : rgba(59, 175, 220, 0.2)
 $base-extra-light : #CEE9ED
 $comp : #EF7B59
 $dark : #222
 $light : #F0F0F0
+
+$offset : #202020
 
 /// Mixin
 
@@ -33,122 +35,131 @@ $light : #F0F0F0
   -webkit-transform-origin : $properties
   -o-transform-origin : $properties
   
+@mixin background-linear-gradient($properties)
+  background-image : linear-gradient($properties)
+  background-image : -moz-linear-gradient($properties)
+  background-image : -webkit-linear-gradient($properties)
+  background-image : -o-linear-gradient($properties)
+  
+  
 /// Main
 
 html, body
   height : 100%
   padding : 0
+  margin : 0
 
 body
   color : $dark
   background : $light
-  font-family : 'Arimo', sans-serif
-  margin : 0
   font-size : 10pt
+  font-family : 'Open+Sans', sans-serif
 
 #container  
   position : relative
   min-height : 100%
 
-body > *
-  width : auto
-  margin : auto
-
 a
-  color : $light
+  color : $dark
+  text-decoration : none
   &:visited
-    color : $light
+    color : $dark
+  &:hover
+    color : $comp
 
 h1, h2
-  font-family : 'Lobster', cursive
+  font-family : 'Titan One', cursive
+  color : $light - $offset
   
 header
-  background : $base
-  border-bottom : 100px solid $base-light
-  height : 140px
+  background-color : $base
+  @include background-linear-gradient((-45deg, transparent 21.875%, $base-light 21.875%, $base-light 28.125%, transparent 28.125%, transparent 71.875%, $base-light 71.875%, $base-light 78.125%, transparent 78.125%, transparent))
+  background-size : 12px 12px
+  background-clip : border-box
+  
+  border-top : 1px solid $base - $offset
+  border-bottom : 90px solid $base-light
+  //$base-light + #070707
+  
+  height : 130px
   position : relative
   top : 0px
+  
+  margin-bottom : 80px
 
-  #logo
-    color : $light
-    background : url('/etn-theme/png/logo.png')
+  #header-content
+    max-width : 720px
     margin : auto
-    width : 366px
-    height : 250px
-    position : relative
-    top : 93px
 
-    #title
-      font-family : 'Titan One', cursive
-      font-size : 25pt
-      text-align : center
-
+    #logo
+      color : $light
+      background : url('/etn-theme/png/logo.png')
+      margin : auto
+      width : 373px
+      height : 253px
       position : relative
-      top : 120px
+      top : 70px
 
-nav
-  //display : none
+      #title
+        font-family : 'Titan One', cursive
+        font-size : 25pt
+        text-align : center
+
+        position : relative
+        top : 120px
+
+    #social
+      float : right
+      position : relative
+      top : -70px
+      
+      a
+        opacity : 0.2
+        &:hover
+          opacity : 0.5
+    
+
+nav 
+  //background : #DDD
+  //border : 1px solid #CCC
+  //padding : 0.5em
+  //margin : 1em 0
+  
+  & *
+    display : inline
+  
+  .bc-link
+    background : no-repeat right url('/etn-theme/png/breadcrumb.png') #DDD
+    
+    border-top : 1px solid #CCC
+    border-bottom : 1px solid #CCC
+    
+    padding : 0.5em 1em 0.3em 0.5em
+
+    &:first-child
+      border-left : 1px solid #CCC
+      padding-left : 0.5em
+  
+    &:last-child
+      border-right : 1px solid #CCC
+      padding-right : 0.5em
+      background : #DDD  
 
 #content
-  padding : 120px
-
-#summarize
-  margin-top : 1px
-  border-top : 1px $dark solid
-  text-align : center
-  padding : 5px 0 0 0
-
-a.article
-  display : inline-block
-
-article
-  position : relative
-  margin : 0px
-  
-  width : 100px
-  height : 300px
-
-  text-align : left
-  overflow : hidden
- 
-  opacity : 0.8
-  background : $dark 
-  background-size : cover
-  color : $light
-  
-  @include transition(1s, (width, opacity))
-
-  margin-left : -3px
-
-  &:hover
-    @include transition(1s, (width, opacity))
-    opacity : 1
-    width : 200px
-
-  h1
-    @include transform(translatey(-75px) rotate(-90deg))
-    position : absolute
-    right : -93px
-    bottom : 0
-    
-    width : 200px
-    @include transition(1s, (right))  
-    
-    font-size : 18pt
-    font-weight : lighter
-
-  &:hover h1
-    right : -80px
-    @include transition(1s, (right)) 
+  max-width : 720px
+  margin-right : auto
+  margin-left : auto
+  padding-bottom : 100px
 
 footer
   
   border-top : 1px solid #CCC
+  border-bottom : 3px solid $base
   
   background : #DDD
   
   position : absolute
-  bottom : 0pt
+  bottom : 0
   
   width : 100%
   

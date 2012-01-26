@@ -1,10 +1,9 @@
-.social
-  %h2 Social links:
-  - url = @page.nil? ? base_url : url_for(@page)
-  - heading = @page.nil? ? @heading : @page.heading
-  %a{ :href => "http://delicious.com/post?url=#{url}&title=#{heading}", :title => "Bookmark on delicious.com" }
-    %img{ :src => "/slate/images/delicious.png", :alt => "Bookmark on delicous.com" }
-  %a{ :href => "http://digg.com/submit?phase=2&url=#{url}&title=#{heading}", :title => "Digg it!" }
-    %img{ :src => "/slate/images/digg.png", :alt => "Digg it!" }
-  %a{ :href => "http://reddit.com/submit?url=#{url}&title=#{heading}", :title => "Reddit!" }
-    %img{ :src => "/slate/images/reddit.gif", :alt => "Reddit!" }
+#social
+  %a{ :href => "https://github.com/gravitezero"}
+    %img{ :src => "/etn-theme/png/git.png", :alt => "GitHub" }
+  %a{ :href => "mailto:etienne.brodu_at_insa-lyon.fr"}
+    %img{ :src => "/etn-theme/png/mail.png", :alt => "Mail" }
+  %a{ :href => "https://twitter.com/#!/gravitezero"}
+    %img{ :src => "/etn-theme/png/twitter.png", :alt => "Twitter" }
+  %a{ :href => "https://www.facebook.com/etnbrd"}
+    %img{ :src => "/etn-theme/png/Facebook.png", :alt => "Facebook" }
