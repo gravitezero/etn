@@ -1,0 +1,42 @@
+a.article
+  display : inline-block
+
+article
+  position : relative
+  margin : 0px
+  
+  width : 100px
+  height : 300px
+
+  text-align : left
+  overflow : hidden
+ 
+  opacity : 0.8
+  background : $dark 
+  background-size : cover
+  color : $light
+  
+  @include transition(1s, (width, opacity))
+
+  margin-left : -3px
+
+  &:hover
+    @include transition(1s, (width, opacity))
+    opacity : 1
+    width : 200px
+
+  h1
+    @include transform(translatey(-75px) rotate(-90deg))
+    position : absolute
+    right : -93px
+    bottom : 0
+    
+    width : 200px
+    @include transition(1s, (right))  
+    
+    font-size : 18pt
+    font-weight : lighter
+
+  &:hover h1
+    right : -80px
+    @include transition(1s, (right))
