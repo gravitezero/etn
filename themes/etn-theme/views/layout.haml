@@ -22,7 +22,7 @@
         #header-content
           #logo
             - @heading.split.each do |word|
-              #title= word
+              .title= word
           = haml :social, :layout => false
       = yield
       %footer
