@@ -1,5 +1,3 @@
-Date : 20 January 2012
-
 # Node project
 
 ##About the Node Project
@@ -33,13 +31,16 @@ A project is a collection of document which belong to a common topic.
 The user experience should be the same along all devices.
 
 
-Abstract data from physical machine to distribute them on multiple storage devices
+##Free data from machines and interfaces
 
-Abstract data from interface and machine
+The idea is to abstract data from interfaces and machines by creating a distributed database of your document.
+On the top of this data layer, put a nice interface which only need to manipulate data, and you got the perfect system.
 
-Adapt Interface on each device
+##Metadata
 
 Base virtual representation on mental representation by making data bit smaller and allowing making links
+
+##Move interfaces
 
 Make easier moving activity and collaboration by making smaller apps atoms.
 
