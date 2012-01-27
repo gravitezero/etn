@@ -1,48 +1,47 @@
-# Node project
+# Introduction
 
-##About the Node Project
+Node est un projet visant à améliorer l'experience utilisateur vis à vis des périphériques médiatiques dans la sphère privé.
 
-I started thinking about a distributed OS many years ago, and I recently decided to start a project about my vision of distributed OS.
+L'experience utilisateur est actuellement éparpillé non seulement sur plusieurs machines, mais égalements plusieurs comptes utilisateurs.
 
-I can't find any name for this wide project, so I used Node instead, the name of one of its subproject.
+à l'heure actuelle Node projet regroupe un ensemble de reflections et de solutions pour réunifier et distribuer l'ensemble de l'experience utilisateur.
 
-##The difference I see between OS and Interface
+L'origine de ce projet viens du fait de la différence que j'établis entre système d'éxploitation et système d'interface utilisateur.
+Le premier est l'interface avec la machine, et permet de l'exploiter au mieux de ses ressources, tandis que le second devrais être faire sentir à l'utilisateur une certaine indépendance vis à vis de la machine, tout en utilisant au mieux les possibilités d'interaction qu'elle offre. 
 
-When I thought about distributed OS, it was in fact a distributed interface, instead of a distributed OS.
-I think an OS should keep managing the hardware, and let the interface to another independent piece of code.
-And it should be this piece of code which unify user's experiences along all devices users owns.
+Je vais essayer de partager ce projet du mieux que je peux.
 
-##Links
+A terme, le but est de combiner la puissance du shell et la facilité des interfaces graphiques.
 
-The file and folder paradigm was a good metaphor to start, and still a good way to organize file accurately for a machine.
-However, for a human, better way of organization could be found.
+# Les noeuds
 
-I think our documents of any kind shouldn't be arrange with a hierarchical filesystem anymore. Instead, documents could be linked to each others to better fit the mental representation.
+Chaque périphériques peut être vu comme le noeud d'un réseaux personnel avec différentes capacité en terme d'interface, de stoquage, de réseaux, et de puissance de calcule.
+
+# Les Données
+
+## Omniprésence des données
+
+Les données sont la raison de notre utilisation de l'outil informatique.
+C'est pourquoi elles devraient être accessible depuis n'importe lequel de nos gadgets.
+On trouve à la base du système, une couche qui s'occupe de l'échange de données necessaire à cette illusion.
+
+## Représentation mentale
+
+La representation que l'on à de nos documents est trés différentes de la representation hiérarchique du système de fichiers actuel.
+Nos documents et données seront organisé par catégories ou projet et liés entre eux pour coller autant que possible à notre représentation mentale, éviter les doublons et faciliter l'organisation.
+
+# L'interface
+
+Cette section n'est pas encore mature.
+
+L'interface est grandement simplifié par l'illusion de localité offerte par la couche de donnée.
+L'interface devrait alors se découper en :
+* Visualisateurs de données
+* Actions 
+
+Ce découpage devrait permettre d'unifier l'interface sur des périphériques aux possibilités différentes.
 
 
-##Projects
-
-A project is a collection of document which belong to a common topic.
-
-##Atoms
-
-##Distributed interface
-
-The user experience should be the same along all devices.
-
-
-##Free data from machines and interfaces
-
-The idea is to abstract data from interfaces and machines by creating a distributed database of your document.
-On the top of this data layer, put a nice interface which only need to manipulate data, and you got the perfect system.
-
-##Metadata
-
-Base virtual representation on mental representation by making data bit smaller and allowing making links
-
-##Move interfaces
-
-Make easier moving activity and collaboration by making smaller apps atoms.
 
 
 
