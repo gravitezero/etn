@@ -7,7 +7,8 @@ $base-light : rgba(59, 175, 220, 0.2)
 $base-extra-light : #CEE9ED
 $comp : #EF7B59
 $dark : #222
-$light : #F0F0F0
+$light : rgb(240, 240, 240)
+$light-title : rgba(240, 240, 240, 0.4)
 
 $offset : #202020
 
@@ -79,7 +80,6 @@ header
   
   border-top : 1px solid $base - $offset
   border-bottom : 90px solid $base-light
-  //$base-light + #070707
   
   height : 130px
   position : relative
@@ -92,7 +92,6 @@ header
     margin : auto
 
     #logo
-      color : $light
       background : url('/etn-theme/png/logo.png')
       margin : auto
       width : 373px
@@ -101,9 +100,11 @@ header
       top : 70px
 
       .title
+        color : $light
         font-family : 'Titan One', cursive
         font-size : 25pt
         text-align : center
+        //text-shadow : -1px -1px $comp + #404040, 1px 1px $comp - #404040
 
         position : relative
         top : 120px
