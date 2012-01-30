@@ -1,14 +1,18 @@
-@import url(http://fonts.googleapis.com/css?family=Titan+One|Quicksand|Open+Sans:400,700,600,400italic)
+@import url(http://fonts.googleapis.com/css?family=Titan+One|Open+Sans:400,700,600,400italic|Lilita+One|Arvo:700)
 
 /// Variables
 
 $base : rgb(6, 108, 126)
 $base-light : rgba(59, 175, 220, 0.2)
-$base-extra-light : #CEE9ED
-$comp : #EF7B59
+$base-extra-light : rgb(206, 233, 237)
+$comp : rgb(239, 123, 89)
 $dark : #222
 $light : rgb(240, 240, 240)
 $light-title : rgba(240, 240, 240, 0.4)
+
+$nav-light : rgb(150, 150, 150)
+$nav-dark : rgb(120, 120, 120)
+$nav-text : rgb(220, 220, 220)
 
 $offset : #202020
 
@@ -42,6 +46,21 @@ $offset : #202020
   background-image : -webkit-linear-gradient($properties)
   background-image : -o-linear-gradient($properties)
   
+@mixin column-count($properties)
+  column-count : $properties
+  -moz-column-count : $properties
+  -webkit-column-count : $properties
+  
+@mixin column-gap($properties)
+  column-gap : $properties
+  -moz-column-gap : $properties
+  -webkit-column-gap : $properties
+  
+@mixin column-rule($properties)
+  column-rule : $properties
+  -moz-column-rule : $properties
+  -webkit-column-rule : $properties
+  
   
 /// Main
 
@@ -67,10 +86,6 @@ a
     color : $dark
   &:hover
     color : $comp
-
-h1, h2
-  font-family : 'Titan One', cursive
-  color : $light - $offset
   
 header
   background-color : $base
@@ -131,16 +146,25 @@ header
     
 
 nav 
-  background : #DDD
-  border : 1px solid #CCC
-  padding : 0.5em 0em 0.3em 0.5em
+
+  color : $nav-text
+  font-weight : 900
+  text-shadow : 1px -1px $nav-dark, -1px -1px $nav-dark, -1px 1px $nav-dark, 1px 1px $nav-dark
+  padding : 0.5em 0.5em 0 0.5em
+  height : 8px
+  background : $nav-light
+  border : 1px solid $nav-dark
+  border-bottom : 10px solid $nav-dark
   
   & *
     display : inline
   
   .bc-link
-    background : no-repeat right url('/etn-theme/png/breadcrumb.png') #DDD
+    background : no-repeat right url('/etn-theme/png/breadcrumb.png')
     padding : 0.5em 1em 0.3em 0.5em
+    
+    position : relative
+    top : -1px
 
     &:first-child
       padding-left : 0.5em
@@ -148,24 +172,75 @@ nav
     &:last-child
       padding-right : 0.5em
       background-image : none
+      
+    a
+      color : $nav-text
+
+    &:visited
+      color : $nav-text
 
 #content
   max-width : 720px
   margin-right : auto
   margin-left : auto
-  padding-bottom : 100px
+  padding-bottom : 200px
+
+article
+
+  color : $dark
+
+  section
+    @include column-count(3)
+    @include column-gap(3em)
+    @include column-rule(1px solid $light - $offset*0.5)
+    border-bottom : 4px dotted $light - $offset*0.5
+    padding-bottom : 4em
+    margin-bottom : 4em
+    
+    &:last-of-type
+      margin-bottom : 0
+      border-bottom : none
+
+  p
+    //text-align : justify
+    line-height : 1.7em
+    letter-spacing : 0.05em
+    
+    &:first-letter
+      text-transform : capitalize
+
+  h1, h2, h3
+    color : $light - $offset -$offset
+
+  h1
+    color : #EEE
+    text-shadow : 1px -1px $comp, -1px -1px $comp, -1px 1px $comp, 1px 1px $comp
+    font-family : 'Arvo', serif
+    padding : 0.5em 0.5em 0 0.5em
+    height : 15px
+    border-bottom : 0.5em solid $comp
+
+  h2
+    font-family : 'Arvo', serif
+    border-bottom : 2px $comp solid
+    font-weight : 100
+    
+  h3
+    font-size : 10pt
+    border-bottom : 1px solid $light - $offset - $offset
 
 footer
+
+  background : #DDD
   
   border-top : 1px solid #CCC
-  border-bottom : 3px solid $base
-  
-  background : #DDD
+  border-bottom : 5px solid $base
   
   position : absolute
   bottom : 0
   
   width : 100%
+  height : 100px
   
   padding : 2em 0
   

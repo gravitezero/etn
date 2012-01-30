@@ -4,4 +4,6 @@
     = haml :nav, :layout => false
     %article  
       ~ @page.to_html(self)
+    #comments
+      = haml :comments, :layout => false
   = haml :footer, :layout => false

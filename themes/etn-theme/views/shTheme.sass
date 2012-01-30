@@ -1,0 +1,98 @@
+$plain : rgb(100, 100, 100)
+$comments : rgb(0, 0, 0)
+$string : rgb(0, 0, 0)
+$keyword : rgb(239, 123, 89)
+$preprocessor : rgb(0, 0, 0)
+$variable : rgb(6, 108, 126)
+$value : rgb(0, 0, 0)
+$functions : rgb(6, 108, 126)
+$constants : rgb(0, 0, 0)
+$script : rgb(0, 0, 0)
+$color1 : rgb(0, 0, 0)
+$color2 : rgb(0, 0, 0)
+$color3 : rgb(0, 0, 0)
+
+$line-alt1 : transparent
+$line-alt2 : rgb(230, 230, 230)
+$gutter : rgb(180, 180, 180)
+$gutter-bg : rgb(80, 80, 80)
+
+$light : rgb(240, 240, 240)
+$highlight : rgb(239, 123, 89)
+
+.toolbar
+  display : none
+  
+.syntaxhighlighter
+
+  .line
+    padding-left : 0.5em
+
+  .line.alt1
+    background-color: $line-alt1
+    
+  .line.alt2
+    background-color: $line-alt2
+    
+  .line.highlighted.alt1, .line.highlighted.alt2
+    background-color: #e0e0e0
+    
+  .line.highlighted.number
+    color : black
+    
+  .gutter
+    color : $gutter
+    
+    .line
+      background-color : $gutter-bg
+      border-right : 2px solid $light
+      padding : 0 0.5em
+    .line.highlighted
+      border-right : 2px solid $highlight
+      background-color : $highlight
+      
+  .code
+    border-left : 3px solid $highlight
+    
+  
+  
+  .plain
+    color : $plain
+    
+  .comments
+    color : $comments
+    
+  .string
+    color : $string
+  
+  .keyword
+    color : $keyword
+    font-weight : bold
+    
+  .preprocessor
+    color : $preprocessor
+    
+  .variable
+    color : $variable
+    
+  .value
+    color : $value
+    
+  .functions
+    color : $functions
+    
+  .constants
+    color : $constants
+    
+  .script
+    color : $script
+    font-weight : bold
+    
+  .color1
+    color : $color1
+    
+  .color2
+    color : $color2
+    
+  .color3
+    color : $color3

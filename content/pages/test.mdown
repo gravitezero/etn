@@ -1,0 +1,9 @@
+#Test
+
+Simply a test page
+
+<pre class="brush: js">
+function foo()
+{
+}
+</pre>

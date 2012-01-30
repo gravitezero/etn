@@ -1,48 +1,52 @@
-# Introduction
+Article heading : Node Project
 
-Node est un projet visant à améliorer l'experience utilisateur vis à vis des périphériques médiatiques dans la sphère privé.
+# Node
 
-L'experience utilisateur est actuellement éparpillé non seulement sur plusieurs machines, mais égalements plusieurs comptes utilisateurs.
+<section>
 
-à l'heure actuelle Node projet regroupe un ensemble de reflections et de solutions pour réunifier et distribuer l'ensemble de l'experience utilisateur.
+Node est un projet visant à améliorer l'expérience utilisateur vis à vis des périphériques médiatiques dans la sphère privé.
 
-L'origine de ce projet viens du fait de la différence que j'établis entre système d'éxploitation et système d'interface utilisateur.
+L'expérience utilisateur est actuellement éparpillé non seulement sur plusieurs machines, mais également plusieurs comptes utilisateurs.
+
+à l'heure actuelle Node projet regroupe un ensemble de réflexions et de solutions pour réunifier et distribuer l'ensemble de l'expérience utilisateur.
+
+L'origine de ce projet viens de la différence que j'établis entre système d'exploitation et système d'interface utilisateur.
 Le premier est l'interface avec la machine, et permet de l'exploiter au mieux de ses ressources, tandis que le second devrais être faire sentir à l'utilisateur une certaine indépendance vis à vis de la machine, tout en utilisant au mieux les possibilités d'interaction qu'elle offre. 
 
 Je vais essayer de partager ce projet du mieux que je peux.
 
 A terme, le but est de combiner la puissance du shell et la facilité des interfaces graphiques.
+</section>
+<section>
+## Les noeuds
 
-# Les noeuds
+Chaque périphériques peut être vu comme le noeud d'un réseaux personnel avec différentes capacité en terme d'interface, de stockage, de réseaux, et de puissance de calcule.
+</section>
+<section>
+## Les Données
 
-Chaque périphériques peut être vu comme le noeud d'un réseaux personnel avec différentes capacité en terme d'interface, de stoquage, de réseaux, et de puissance de calcule.
-
-# Les Données
-
-## Omniprésence des données
+### Omniprésence des données
 
 Les données sont la raison de notre utilisation de l'outil informatique.
 C'est pourquoi elles devraient être accessible depuis n'importe lequel de nos gadgets.
-On trouve à la base du système, une couche qui s'occupe de l'échange de données necessaire à cette illusion.
 
-## Représentation mentale
+On trouve à la base du système, une couche qui s'occupe de l'échange de données nécessaire à cette illusion.
 
-La representation que l'on à de nos documents est trés différentes de la representation hiérarchique du système de fichiers actuel.
+### Représentation mentale
+
+La représentation que l'on à de nos documents est très différentes de la représentation hiérarchique du système de fichiers actuel.
 Nos documents et données seront organisé par catégories ou projet et liés entre eux pour coller autant que possible à notre représentation mentale, éviter les doublons et faciliter l'organisation.
-
-# L'interface
+</section>
+<section>
+## L'interface
 
 Cette section n'est pas encore mature.
 
 L'interface est grandement simplifié par l'illusion de localité offerte par la couche de donnée.
 L'interface devrait alors se découper en :
+
 * Visualisateurs de données
-* Actions 
+* Actions
 
 Ce découpage devrait permettre d'unifier l'interface sur des périphériques aux possibilités différentes.
-
-
-
-
-
-
+</section>

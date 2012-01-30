@@ -1,0 +1,13 @@
+Nesta metadata cheat sheet
+
+Articles heading
+Atom ID
+Description
+Categories
+Date
+Flags
+Keyword
+Layout
+Read more
+Summary
+Template
