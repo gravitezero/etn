@@ -42,7 +42,7 @@ To better fit our mental model, avoid duplicates, and help the organization, it 
 
 The idea is to make flow of data to fit the best our mental model.
 For example, your personal information could be set up as your name, mail and phone number, and you want it to be in your mail signature, and every header of the document you write.
-You should just be able to link every of your personal informations to create this signature, and header. Then, if change your phone number, everywhere it was used, will be change from now on.
+You should just be able to link every of your personal informations to create this signature, and header. Then, if your phone number change, everywhere it was used, will be change from now on.
 
 Seriously, this example suck, but I bet you got the idea.
 
