@@ -17,6 +17,7 @@ I want to combine the power of shell with the easiness of graphical interfaces.
 
 I will try to share these thoughts the best I can.
 
+
 </section>
 <section>
   
@@ -58,6 +59,7 @@ The idea is to have with one device, the control of multiple device.
 
 For this, applications should be split into multiple part easier to start.
 These part could be of two types :
+
 * Data viewer
 * Actions
 
