@@ -50,6 +50,13 @@ You should just be able to link every of your personal informations to create th
 
 Seriously, this example suck, but I bet you got the idea.
 
+
+//TODO integrate
+
+We should imagine the way file systems used to translate bits into files full of characters for us, in the same way, a new layer should translate files into versions of documents linked between them.
+And this new layer should become so common, and so useful, that it would be as easy to use as a file systems.
+
+
 </section>
 <section>
 
