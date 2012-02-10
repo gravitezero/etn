@@ -1,12 +1,15 @@
-#Node
+layout : unify-layout
+categories : unify
+
+#Unify
 
 <section>
 
-Node is a wide project which aim to improve the user experience on personal and media devices.
+Unify is a wide project which aim to improve the user experience on personal and media devices.
 
 The user experience is currently scattered on many interfaces and devices.
 
-For the moment, Node gather many of my reflections and solution to re-unify the user experience.
+For the moment, Unify gather many of my reflections and solution to re-unify the user experience.
 
 The idea is to split the user interface from the OS.
 The OS is meant to make the device or computer run properly, while the user interface is meant to make the user feel comfortable on the device.
