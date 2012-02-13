@@ -1,0 +1,9 @@
+The notification system shouldn't be a system that notify the input output events, but more the awareness of the user.
+And even, a notification should be linked to an event, and it would be possible to select the level of awareness (not aware, aware but not read, read but have to reread or respond)
+
+
+About GUI vs command line and text file
+
+The GUI is basically hiding you the complicated and real stuff, while the command line is in a way giving you more power, but in a harder way.
+My point is to use the poser of GUI over simple command line to get back this power.
+Getting the GUI not hiding you anything, and still being easy and understandable : that's the whole point.
