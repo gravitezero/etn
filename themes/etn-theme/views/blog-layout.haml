@@ -7,7 +7,7 @@
     - if @keywords
       %meta{ "name" => "keywords", "content" => @keywords }
     %title= @title
-    %link{ :href => "/css/master.css", :media => "screen", :rel => "stylesheet", :type => "text/css" }
+    %link{ :href => "/css/blog.css", :media => "screen", :rel => "stylesheet", :type => "text/css" }
      
     %link{ :href => "/articles.xml", :rel => "alternate", :type => "application/atom+xml" }
     %link{ :href => "/etn-theme/png/favicon.png", :rel => "icon", :type => "image/png" }
@@ -23,4 +23,17 @@
       //);
       SyntaxHighlighter.all();
   %body
-    = yield
+    #container
+      %header
+        #header-content
+          = haml :social, :layout => false
+          = haml :valid, :layout => false
+      #content
+        //= haml :nav, :layout => false
+        = yield
+      %footer
+        %p
+          Etienne Brodu © 2012
+        %p
+          Using
+          %a{ :href => "http://nestacms.com"} Nesta

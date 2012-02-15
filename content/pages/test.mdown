@@ -1,3 +1,5 @@
+Categories : blog
+
 #Test
 
 Simply a test page
