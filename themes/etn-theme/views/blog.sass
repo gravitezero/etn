@@ -4,9 +4,15 @@ $high : rgb(255, 77, 87)
 $light : rgb(255, 245, 235)
 $base : rgb(178, 156, 133)
 $comp : rgb(48, 110, 115)
-$dark : rgb(29, 24, 31)
+$dark : rgb(44, 32, 48)
 
 $offset : rgb(10, 10, 10)
+
+@mixin background-linear-gradient($properties)
+  background-image : linear-gradient($properties)
+  background-image : -moz-linear-gradient($properties)
+  background-image : -webkit-linear-gradient($properties)
+  background-image : -o-linear-gradient($properties)
 
 html, body
   height : 100%
@@ -14,7 +20,7 @@ html, body
   margin : 0
 
 body
-  background-color : $light
+  background : url('/etn-theme/png/noise.png') $light
   color : $dark
   font-family : 'Open Sans', sans-serif
 
@@ -29,6 +35,7 @@ a
   margin : auto
   padding-bottom : 200px
   width : 720px
+  max-width : 100%
 
 header
   background : $dark
@@ -49,9 +56,43 @@ header
     #social
       float : right
 
+#time
+
+  position : relative
+  right : 70px
+  width : 50px
+  
+  margin : -50px 0
+  
+  text-align : center
+  
+  //background : $dark
+  color : $light
+  
+  @include background-linear-gradient((-45deg, $dark 12.5%, transparent 12.5%, transparent 37.5%, $dark 37.5%, $dark 62.5%, transparent 62.5%, transparent 87.5%, $dark 87.5%, $dark))
+  background-size : 3px 3px
+  background-clip : border-box
+  
+  border-top : 6px solid transparent
+  border-bottom : 2px solid $high
+
+  #day, #month, #year
+    background-color : $dark
+
+  #day
+    font-size : 20pt
+    font-weight : bolder
+  #month
+    font-size : 13pt
+    text-transform : uppercase
+  #year
+    font-size : 9pt
+    font-weight : bold
+
 h2
   padding : 0.3em 0
   border-bottom : 1px dotted $dark
+  text-transform : uppercase
 
   a
     color : $high
@@ -61,6 +102,19 @@ h2
 
 article
   border-bottom : 1px dotted $dark
+  
+  
+  p
+    line-height : 1.7em
+    letter-spacing : 0.05em
+    font-size : 10pt
+    
+    &:first-letter
+      text-transform : capitalize
+
+#separator
+  background : url('/etn-theme/png/star.png') center no-repeat
+  height : 128px
 
 footer
 

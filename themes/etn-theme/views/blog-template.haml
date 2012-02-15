@@ -12,12 +12,18 @@
         - haml_tag (defined?(heading) ? heading : :h2) do
           %a{ :href => page.abspath }= page.heading
         - if page.date
-          %time= format_date(page.date)
+          //%time= format_date(page.date)
+          //- time = Time.new
+          #time
+            #day= page.date.strftime("%d")
+            #month= page.date.strftime("%b")
+            #year= page.date.strftime("%Y")
         - if page.summary.nil? || page.summary.empty?
           ~ page.body
         - else
           ~ page.summary
           %p.read_more
             %a{ :href => page.abspath }= page.read_more
+      #separator
 
 
