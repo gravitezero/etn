@@ -1,0 +1,88 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans)
+
+$high : rgb(255, 77, 87)
+$light : rgb(255, 245, 235)
+$base : rgb(178, 156, 133)
+$comp : rgb(48, 110, 115)
+$dark : rgb(29, 24, 31)
+
+$offset : rgb(10, 10, 10)
+
+html, body
+  height : 100%
+  padding : 0
+  margin : 0
+
+body
+  background-color : $light
+  color : $dark
+  font-family : 'Open Sans', sans-serif
+
+a
+  text-decoration : none
+
+#container
+  position : relative
+  min-height : 100%
+
+#content
+  margin : auto
+  padding-bottom : 200px
+  width : 720px
+
+header
+  background : $dark
+  border-bottom : 2px solid $high  
+  
+  #header-content
+    width : 720px
+    margin : auto
+    padding-top : 6px
+
+    #valid a img, #social a img
+      opacity : 0.2      
+      &:hover
+        opacity : 0.5
+  
+    #valid
+  
+    #social
+      float : right
+
+h2
+  padding : 0.3em 0
+  border-bottom : 1px dotted $dark
+
+  a
+    color : $high
+  
+    &:hover
+      color : $high - $offset*5
+
+article
+  border-bottom : 1px dotted $dark
+
+footer
+
+  background : $dark
+
+  border-top : 1px solid $dark + $offset*10
+  border-bottom : 5px solid $high
+
+  position : absolute
+  bottom : 0
+
+  width : 100%
+  height : 100px
+
+  padding : 2em 0
+
+  color : $light
+  text-align : center
+  font-size : 9pt
+  
+  a
+    color : $light - $offset*5
+    &:hover
+      color : $high
+    

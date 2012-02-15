@@ -1,0 +1,8 @@
+Date: 13 February 2012
+Categories: blog
+Layout: blog-layout
+Template: blog-template
+
+# test blog
+
+Under construction

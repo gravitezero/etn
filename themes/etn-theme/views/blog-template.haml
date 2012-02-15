@@ -1,0 +1,23 @@
+#header
+
+#content
+  - if @page.date
+    .date= format_date(@page.date)
+    
+  ~ @page.to_html(self)
+  
+  - unless @page.articles.empty?
+    - @page.articles.each do |page|
+      %article
+        - haml_tag (defined?(heading) ? heading : :h2) do
+          %a{ :href => page.abspath }= page.heading
+        - if page.date
+          %time= format_date(page.date)
+        - if page.summary.nil? || page.summary.empty?
+          ~ page.body
+        - else
+          ~ page.summary
+          %p.read_more
+            %a{ :href => page.abspath }= page.read_more
+
+
