@@ -1,0 +1,38 @@
+Date : 13 October 2011
+Categories : portfolio
+
+# Cosmic Commander
+
+<img src="/attachments/cosmic-commander.png" alt="Cosmic Commander"/>
+
+## Fourth exercise in the course Prototyping for Interaction Design
+
+We had to prototype a Wii U game using image editing software.
+
+The Wii U controller is very different from the old one.
+The first Wii controller was intended to be hold standing up, looking at the tv screen, and moving for interacting with the game.
+With the front camera, the touch screen, the accelerometer and the compass, this new Wii U controller is completly different. It's more intended to be hold sitting in the couch, watching and interacting with the controller.
+
+The main idea is to create a very immersive universe by transforming the player room into a spaceship.
+
+The player is the driver of a spaceship, and so have to run all the different tasks.
+With the compass and the accelerometer, the Wii U controller can detect its position into the room, and so display a different interface for different positions.
+
+The TV screen always displays the view from the cockpit.
+The controller displays navigation controls while in front of the TV screen, cannons controls while heading one of the two sides and the engine controls while the player is back to the TV screen.
+
+The player have so to change from one position to another to run the ship during space fight.
+
+We mainly focus on the interface and the immersion, it's why this game don't have any scenario nor detailed environment.
+
+<img src="/attachments/cosmic-commander1.png" alt="Cosmic Commander 1"/>
+
+<img src="/attachments/cosmic-commander2.png" alt="Cosmic Commander 2"/>
+
+<img src="/attachments/cosmic-commander3.png" alt="Cosmic Commander 3"/>
+
+<img src="/attachments/cosmic-commander4.png" alt="Cosmic Commander 4"/>
+
+<img src="/attachments/cosmic-commander5.png" alt="Cosmic Commander 5"/>
+
+<img src="/attachments/cosmic-commander6.png" alt="Cosmic Commander 6"/>

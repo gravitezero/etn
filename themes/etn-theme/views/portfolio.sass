@@ -58,6 +58,8 @@ header
 
 #time
 
+  display : none
+
   position : relative
   right : 70px
   width : 50px
@@ -100,23 +102,29 @@ h1
     &:hover
       color : $high - $offset*5
 
-article
-  border-bottom : 1px dotted $dark
+section
+  float : left
+  width : 180px
+  height : 180px
+  border-bottom : 3px solid $base
+  //padding : 1em
+  overflow : hidden
+  background : $dark
   
-  margin-top : 2em
+  &:nth-of-type(3n+2)
+    margin : 45px 45px
+  &:nth-of-type(3n+1)
+    margin : 45px 45px 45px 0
+  &:nth-of-type(3n+3)
+    margin : 45px 0 45px 45px
   
-  
-  p
-    line-height : 1.7em
-    letter-spacing : 0.05em
-    font-size : 10pt
-    
-    &:first-letter
-      text-transform : capitalize
 
 #separator
   background : url('/etn-theme/png/star.png') center no-repeat
   height : 64px
+
+#footer
+  clear : both
 
 footer
 
@@ -141,4 +149,3 @@ footer
     color : $light - $offset*5
     &:hover
       color : $high
-    

@@ -1,0 +1,8 @@
+#content
+  %article
+    - if @page.date
+      #time
+        #day= @page.date.strftime("%d")
+        #month= @page.date.strftime("%b")
+        #year= @page.date.strftime("%Y")  
+    ~ @page.to_html(self)
