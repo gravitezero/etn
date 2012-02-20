@@ -2,4 +2,11 @@ Layout : portfolio-layout
 Template : portfolio-template
 
 #heading
-  Portfolio
+  .title
+    - @heading.split.each do |word|
+      %h1= word
+    %h2= @subtitle
+  %p
+    Sometimes, it happen that I successfully finish some piece of art so beautiful that I immediately want to share it, so I post it here.
+  %p
+    However, most of the time I post here only drafts I won't finish.

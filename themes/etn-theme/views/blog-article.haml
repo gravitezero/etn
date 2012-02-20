@@ -6,3 +6,4 @@
         #month= @page.date.strftime("%b")
         #year= @page.date.strftime("%Y")  
     ~ @page.to_html(self)
+  = haml :comments, :layout => false

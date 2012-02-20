@@ -1,10 +1,12 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans)
+@import url(http://fonts.googleapis.com/css?family=Open+Sans|Sarina)
 
-$high : rgb(255, 77, 87)
-$light : rgb(255, 245, 235)
-$base : rgb(178, 156, 133)
-$comp : rgb(48, 110, 115)
-$dark : rgb(44, 32, 48)
+$high : rgb(255, 83, 121)
+$light : rgb(255, 247, 240)
+$base : rgb(59, 66, 76)
+$comp : rgb(0, 171, 171)
+$dark : rgb(29, 24, 31)
+$dark-trans : rgba(29, 24, 31, 0.8)
+$dark-test : rgba(29, 24, 31, 0.2)
 
 $offset : rgb(10, 10, 10)
 
@@ -13,6 +15,28 @@ $offset : rgb(10, 10, 10)
   background-image : -moz-linear-gradient($properties)
   background-image : -webkit-linear-gradient($properties)
   background-image : -o-linear-gradient($properties)
+
+@mixin transform($properties)
+  transform : $properties
+  -moz-transform : $properties
+  -webkit-transform : $properties
+  -o-transform : $properties
+
+@mixin transform-origin($properties)
+  transform-origin : $properties
+  -moz-transform-origin : $properties
+  -webkit-transform-origin : $properties
+  -o-transform-origin : $properties
+
+@mixin transition($duration, $properties)
+  transition-property : $properties
+  transition-duration : $duration
+  -moz-transition-property : $properties
+  -moz-transition-duration : $duration
+  -webkit-transition-property : $properties
+  -webkit-transition-duration : $duration
+  -o-transition-property : $properties
+  -o-transition-duration : $duration
 
 html, body
   height : 100%
@@ -38,7 +62,7 @@ a
   max-width : 100%
 
 header
-  background : $dark
+  background : $base
   border-bottom : 2px solid $high  
   
   #header-content
@@ -56,60 +80,38 @@ header
     #social
       float : right
 
-#time
+#heading
 
-  display : none
+  .title
 
-  position : relative
-  right : 70px
-  width : 50px
-  
-  margin-bottom : -122px
-  
-  text-align : center
-  
-  //background : $dark
-  color : $light
-  
-  @include background-linear-gradient((-45deg, $dark 12.5%, transparent 12.5%, transparent 37.5%, $dark 37.5%, $dark 62.5%, transparent 62.5%, transparent 87.5%, $dark 87.5%, $dark))
-  background-size : 3px 3px
-  background-clip : border-box
-  
-  border-top : 6px solid transparent
-  border-bottom : 2px solid $high
+    z-index : -1
+    font-family : 'Sarina', cursive
+    font-weight : lighter
 
-  #day, #month, #year
-    background-color : $dark
+    opacity : 0.05
+    position : relative
+    right : 130px
+    top : -130px
+    margin-bottom : -200px
 
-  #day
-    font-size : 20pt
-    font-weight : bolder
-  #month
-    font-size : 13pt
-    text-transform : uppercase
-  #year
-    font-size : 9pt
-    font-weight : bold
-
-h1
-  padding : 0.3em 0
-  border-bottom : 1px dotted $dark
-  text-transform : uppercase
-
-  &, a
-    color : $high
+    h1, h2
+      //display : inline
+      line-height : 0.2em
+      font-weight : bolder
+      @include transform(rotate(-24deg))
   
-    &:hover
-      color : $high - $offset*5
+    h1
+      font-size : 70pt
+    h2
+      font-size : 50pt
 
 section
   float : left
   width : 180px
   height : 180px
-  border-bottom : 3px solid $base
-  //padding : 1em
+  border-bottom : 3px solid $high
   overflow : hidden
-  background : $dark
+  background : url('/etn-theme/png/logo.png') center
   
   &:nth-of-type(3n+2)
     margin : 45px 45px
@@ -118,6 +120,28 @@ section
   &:nth-of-type(3n+3)
     margin : 45px 0 45px 45px
   
+  &:hover h1
+    @include transition(1s, (top))
+    position : relative
+    top : 120px
+  
+
+  
+  h1
+    @include transition(1s, (top))
+    width : 180px
+    height : 180px
+    padding : 0.5em
+    position : relative
+    top : 180px
+    background : $dark-trans
+
+    &, a
+      color : $light
+      font-size : 10pt
+    
+#time
+  display : none
 
 #separator
   background : url('/etn-theme/png/star.png') center no-repeat
@@ -128,10 +152,11 @@ section
 
 footer
 
-  background : $dark
+  background : $light - $offset * 3
 
-  border-top : 1px solid $dark + $offset*10
-  border-bottom : 5px solid $high
+  //border-top : 1px solid $dark + $offset*10
+  border-top : 1px solid $light - $offset * 5
+  border-bottom : 30px solid $high - $offset * 2
 
   position : absolute
   bottom : 0
@@ -141,11 +166,24 @@ footer
 
   padding : 2em 0
 
-  color : $light
+  //color : $light
+  color : $dark
   text-align : center
   font-size : 9pt
   
   a
-    color : $light - $offset*5
+    //color : $light - $offset*5
+    color : $dark
     &:hover
       color : $high
+      
+  .rock
+    position : relative
+    top : 0px
+    
+    color : $high - $offset * 2
+    
+    font-family : 'Sarina', cursive
+    font-weight : lighter
+    font-size : 30pt
+    @include transform(rotate(-24deg))

@@ -7,3 +7,8 @@ About GUI vs command line and text file
 The GUI is basically hiding you the complicated and real stuff, while the command line is in a way giving you more power, but in a harder way.
 My point is to use the poser of GUI over simple command line to get back this power.
 Getting the GUI not hiding you anything, and still being easy and understandable : that's the whole point.
+
+
+
+We should imagine the way file system used to translate bits into files full of characters for us, in the same way, a new layer should translate files into versions of documents linked between them.
+And this new layer should become so common, and so useful, that it would be as easy to use as a file systems.

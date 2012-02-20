@@ -1,6 +1,7 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans)
+@import url(http://fonts.googleapis.com/css?family=Open+Sans|Abril+Fatface)
 
-$high : rgb(255, 77, 87)
+//$high : rgb(255, 77, 87)
+$high : rgb(255, 83, 121)
 $light : rgb(255, 245, 235)
 $base : rgb(178, 156, 133)
 $comp : rgb(48, 110, 115)
@@ -51,10 +52,18 @@ header
       &:hover
         opacity : 0.5
   
-    #valid
-  
     #social
       float : right
+
+#heading
+  h3
+    font-family: 'Abril Fatface', cursive
+    font-weight : lighter
+    
+  p
+    line-height : 1.7em
+    letter-spacing : 0.05em
+    
 
 #time
 
@@ -68,9 +77,10 @@ header
   
   //background : $dark
   color : $light
+  font-family: 'Abril Fatface', cursive
   
   @include background-linear-gradient((-45deg, $dark 12.5%, transparent 12.5%, transparent 37.5%, $dark 37.5%, $dark 62.5%, transparent 62.5%, transparent 87.5%, $dark 87.5%, $dark))
-  background-size : 3px 3px
+  background-size : 4px 4px
   background-clip : border-box
   
   border-top : 6px solid transparent
@@ -93,6 +103,8 @@ h1
   padding : 0.3em 0
   border-bottom : 1px dotted $dark
   text-transform : uppercase
+  font-family: 'Abril Fatface', cursive
+  font-weight : lighter
 
   &, a
     color : $high
