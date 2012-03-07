@@ -1,0 +1,139 @@
+@import url(http://fonts.googleapis.com/css?family=Lobster|Open+Sans)
+
+$base : rgb(6, 108, 126)
+//$base-light : rgba(59, 175, 220, 0.2)
+$base-light : rgb(26, 128, 146)
+
+@mixin transform($properties)
+  transform : $properties
+  -moz-transform : $properties
+  -webkit-transform : $properties
+  -o-transform : $properties
+
+@mixin transform-origin($properties)
+  transform-origin : $properties
+  -moz-transform-origin : $properties
+  -webkit-transform-origin : $properties
+  -o-transform-origin : $properties
+
+h1, h2, h3
+  font-family : 'Lobster', cursive
+  line-height : 0
+
+html, body
+  margin : 0
+  padding : 0
+  font-family: 'Open Sans', sans-serif
+
+#container
+  margin : auto
+
+#heading
+  background : $base
+  color : white
+
+  #content
+    width : 720px
+    margin : auto
+  
+    #horizontal
+  
+      h1
+        position : relative
+        opacity : 0.2
+        //@include transform(rotate(-90deg))
+        //@include transform-origin()
+        //top : 30px
+        //left : -20px
+  
+      section
+        display : inline-block
+        width : 175px
+        vertical-align : top
+        
+        ul
+        
+          border-right : 1px white solid
+          margin-right : 20px
+          padding-right : 5px
+          position : relative
+          right : 30px
+                      
+          li
+            list-style-type : none
+            text-align : right
+            
+    #intro
+      font-size : 14pt
+    
+    .left
+      display : inline-block
+      width : 357px
+      
+    .right
+      display : inline-block
+      text-align : right
+      width : 350px  
+#personal
+  background : $base-light
+  color : white
+    
+  #content
+    width : 720px
+    margin : auto
+  
+    section
+      width : 357px
+      display : inline-block
+      vertical-align : top
+  
+    ul
+      li
+        list-style-type : none
+  
+    ul.left
+      li
+        position : relative
+        left : -40px
+    
+    ul.right
+      text-align : right
+
+#footer
+  #content
+    width : 720px
+    margin : auto
+
+    #information
+      section
+        width : 357px
+        display : inline-block
+        vertical-align : top
+
+      ul
+        li
+          list-style-type : none
+
+      ul.left
+        li
+          position : relative
+          left : -40px
+  
+      ul.right
+        text-align : right
+      
+    #vertical
+      width : 238px
+      border : 1px solid red
+      padding : 10px
+      
+      section
+        display : inline-block
+        border-bottom : 1px dotted black
+        padding : 10px 0
+        
+        #date, #techno
+          text-align : right
+          
+        
+

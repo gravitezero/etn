@@ -12,6 +12,9 @@ module Nesta
 
     helpers do
       # Add new helpers here.
+      def pages_in(path)
+        Nesta::Page.find_by_path(path).pages
+      end
     end
 
     # Add new routes here.
