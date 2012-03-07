@@ -1,8 +1,8 @@
-@import url(http://fonts.googleapis.com/css?family=Lobster|Open+Sans)
+@import url(http://fonts.googleapis.com/css?family=Norican|Open+Sans)
 
 $base : rgb(6, 108, 126)
-//$base-light : rgba(59, 175, 220, 0.2)
 $base-light : rgb(26, 128, 146)
+$comp : rgb(239, 123, 89)
 
 @mixin transform($properties)
   transform : $properties
@@ -16,14 +16,20 @@ $base-light : rgb(26, 128, 146)
   -webkit-transform-origin : $properties
   -o-transform-origin : $properties
 
-h1, h2, h3
-  font-family : 'Lobster', cursive
-  line-height : 0
-
 html, body
+  font-family: 'Open Sans', sans-serif
   margin : 0
   padding : 0
-  font-family: 'Open Sans', sans-serif
+
+.hidden
+  display : none
+
+.bold
+  font-weight : bold
+
+.name
+  font-size : 25pt
+  line-height : 23pt
 
 #container
   margin : auto
@@ -35,16 +41,31 @@ html, body
   #content
     width : 720px
     margin : auto
+    margin-top : -30px
+    padding-bottom : 30px
   
     #horizontal
+    
+      margin-bottom : 40px
   
       h1
         position : relative
         opacity : 0.2
-        //@include transform(rotate(-90deg))
-        //@include transform-origin()
-        //top : 30px
-        //left : -20px
+        font-family : 'Norican', cursive
+        font-weight : normal
+        font-size : 32pt
+        line-height : 0
+        text-align : right
+        @include transform(rotate(-90deg))
+        top : 370px
+        left : -350px
+        
+      h2
+        font-family : 'Norican', cursive
+        font-weight : normal
+        line-height : 0
+        text-align : right
+        margin-right : 30px
   
       section
         display : inline-block
@@ -64,7 +85,8 @@ html, body
             text-align : right
             
     #intro
-      font-size : 14pt
+      font-size : 16pt
+      padding-left : 40px
     
     .left
       display : inline-block
@@ -81,17 +103,26 @@ html, body
   #content
     width : 720px
     margin : auto
+
   
     section
+      vertical-align : top
+      margin-top : -15px
+      margin-bottom : -15px
       width : 357px
       display : inline-block
       vertical-align : top
   
     ul
+      position : relative
+      top : 5px
+      
       li
         list-style-type : none
   
     ul.left
+      margin-top : 17px
+      
       li
         position : relative
         left : -40px
@@ -105,6 +136,10 @@ html, body
     margin : auto
 
     #information
+      
+      margin-top : 20px
+      margin-bottom : 50px
+      
       section
         width : 357px
         display : inline-block
@@ -121,19 +156,74 @@ html, body
   
       ul.right
         text-align : right
+    
+    #logo
+      background : url('/etn-theme/png/logo.png') center no-repeat
+      width : 373px
+      height : 253px
+      margin : auto
+      margin-bottom : -253px
       
+      position : relative
+      top : -321px
+      
+      #text
+        font-family : 'Norican', cursive
+        text-align : center
+        font-size : 32pt
+        color : white
+        line-height : 30pt
+        
+        position : relative
+        top : 120px
+        
     #vertical
-      width : 238px
-      border : 1px solid red
-      padding : 10px
+      width : 30%
+      display : inline-block
+      border-right : 1px solid black
+      vertical-align : top
+      margin-bottom : 50px
+      padding : 0 10px
+      
+      font-size : 10pt
+      
+      &:last-of-type
+        border-right : none
+        padding-right : 0
+        
+      &:first-of-type
+        padding-left : 0
+      
+      h1
+        font-weight : normal
+        font-size : 23pt
+        margin-top : -10px
+        
       
       section
-        display : inline-block
         border-bottom : 1px dotted black
-        padding : 10px 0
+        padding : 20px 0
+        
+        &:first-of-type
+          padding-top : 0
+        
+        &:last-of-type
+          border-bottom : none
+        
+        h2
+          color : $comp
+          margin-top : -4px
+        
+        h3
+          margin-bottom : 0
         
         #date, #techno
           text-align : right
           
+        #education
+          margin-bottom : 20px
+          
+          &:last-of-type
+            margin-bottom : 0
         
 

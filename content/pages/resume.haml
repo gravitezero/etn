@@ -1,6 +1,9 @@
 Layout : resume-layout
 Template : resume-template
 
+%span.hidden
+  %h1 Resume - Etienne Brodu
+
 #heading
   #content
     #horizontal
@@ -28,7 +31,7 @@ Template : resume-template
         %ul
           %li Git
           %li Zsh
-          %li LaTeS
+          %li LaTeX
       %section
         %h2
           Adobe
@@ -44,20 +47,27 @@ Template : resume-template
       I grow ideas, and I love that. To plant germs in my brain and feed them with my imagination, cut sterile branches and cherish good ones, make them blossom.
     %p.right
       I could never stop thinking, even if I tried.
+      %br
       I’m adaptable, accurate, inventive & proactive.
       And I’d love to contribute building the world we will live in.
 #personal
   #content
     #information
       %section
-        %ul.left
+        %ul.left.name
           %li Etienne
           %li Brodu
       %section
         %ul.right
-          %li Software developer
-          %li UI / UX designer
-          %li Idea grower
+          %li
+            %span.bold Software
+            developer
+          %li
+            %span.bold UI / UX
+            designer
+          %li
+          %span.bold Idea
+          grower
           
   #content
 #footer
@@ -73,49 +83,116 @@ Template : resume-template
           %li French (native)
           %li English (fluent)
           %li German (beginner)
-        
+    
+    #logo
+      #text
+        etn
+        %br
+        brd
+    #vertical
+      %h1 Highlighted Work Experiences
+      %section
+        #date
+          May - August 
+          %span.bold 2011
+        %h2 Philips HC
+        #summary
+          Improvement of a collision avoidance system in an embedded medical system.
+        #techno
+          %span.bold C++
+          +
+          %span.bold intel VTune
+      %section
+        #date
+          June - August
+          %span.bold 2010
+        %h2 CITI - INRIA
+        #summary
+          Adaptation of an OSGi modification to dalvik : remote class loading.
+        #techno
+          %span.bold C++
+          +
+          %span.bold intel VTune
+      %section
+        #date
+          February
+          %span.bold 2008
+        %h2 CITI - INRIA
+        #summary
+          Adaptation of an OSGi modification to dalvik : remote class loading.
+        #techno
+          %span.bold HTML
+          +
+          %span.bold CSS
+          +
+          %span.bold JavaScript
+          
+    #vertical
+      %h1 Personnal Projects
+      %section
+        %h2 Distributed OS
+        #summary
+          I always have been thinking of an OS distributed on many platform. As a remplacement for multiple interfaces on multiple devices.
+        #techno
+          %span.bold C++
+          +
+          %span.bold Boost
+      %section
+        #date
+          Sometimes
+        %h2 CMS Deployment
+        #summary
+          I like to test new stuffs, it keeps up my creativity. From time to time I test some new CMS.
+        #techno
+          %span.bold PHP
+          +
+          %span.bold Ruby on Rails
+      %section
+        #date
+          Sometimes
+        %h2 HTML5 & CSS 3
+        #summary
+          Few experiments in HTML5 & CSS3, for me to stay tuned, and concretizes some ideas.
+        #techno
+          %span.bold HTML5
+          +
+          %span.bold CSS 3
+          +
+          %span.bold JS
+          +
+          %span.bold WebGL
+          
     #vertical
       %section
-        #date May - August 2011
-        %h2 Philips HC
-        #summary
-          Improvement of a collision avoidance system in an embedded medical system.
-        #techno
-          C++ + intel VTune
+        %h2 Education
+        #education
+          #date
+            %span.bold 2007
+            \-
+            %span.bold 2012
+          #summary
+            Master of Engineering in Computer Sciences and Information Technology.
+          #school
+            National Institute of Applied Sciences (INSA) of Lyon, France
+        #education
+          #date
+            First semester
+            %span.bold 2011
+            \-
+            %span.bold 2012
+          #summary
+            Master of Interaction Design & Technologies.
+          #school
+            Chalmers University of Technology, Gothenburg, Sweden
       %section
-        #date May - August 2011
-        %h2 Philips HC
-        #summary
-          Improvement of a collision avoidance system in an embedded medical system.
-        #techno
-          C++ + intel VTune
-    #vertical
-      %section
-        #date May - August 2011
-        %h2 Philips HC
-        #summary
-          Improvement of a collision avoidance system in an embedded medical system.
-        #techno
-          C++ + intel VTune
-      %section
-        #date May - August 2011
-        %h2 Philips HC
-        #summary
-          Improvement of a collision avoidance system in an embedded medical system.
-        #techno
-          C++ + intel VTune
-    #vertical
-      %section
-        #date May - August 2011
-        %h2 Philips HC
-        #summary
-          Improvement of a collision avoidance system in an embedded medical system.
-        #techno
-          C++ + intel VTune
-      %section
-        #date May - August 2011
-        %h2 Philips HC
-        #summary
-          Improvement of a collision avoidance system in an embedded medical system.
-        #techno
-          C++ + intel VTune
+        %h2 Interests
+        #interest
+          Graphic Design, Information visualization, Video Games
+        #interest
+          %h3 Travel
+          4 months in Netherlands
+          %br
+          4 months in Sweden
+        #interest
+          %h3 Sport
+          climbing, running, snowboard, longbard
